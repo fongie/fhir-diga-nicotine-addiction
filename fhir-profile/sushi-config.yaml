@@ -1,0 +1,31 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: com.alextherapeutics.fhir.nicotine
+canonical: http://www.alextherapeutics.com/fhir
+name: F17.2DiGA
+title: FHIR Profile for Digital Health Applications that treat nicotine addiction  (F17.2) using CBT
+description: An implementation guide to the FHIR profile for DiGAs that treat ICD-10 F17.2
+status: draft
+license: CC-BY-4.0
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2021+
+releaseLabel: ci-build
+publisher:
+  name: Alex Therapeutics AB
+  url: https://www.alextherapeutics.com
+  email: hello@alextherapeutics.com
+dependencies:
+  hl7.fhir.uv.ips: 1.0.0
+  de.basisprofil.r4:
+    uri: http://fhir.de/ImplementationGuide/basisprofil-de-r4
+    version: 1.0.0-alpha9
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
