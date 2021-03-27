@@ -1,0 +1,63 @@
+\documentclass[12px]{report}
+
+\usepackage[style=numeric,sorting=none,backend=biber]{biblatex}
+\addbibresource{references.bib} % The file containing our references, in BibTeX format
+
+\begin{document}
+
+\chapter{Introduction}
+\label{ch:intro}
+
+Introduction text.
+
+\section{Version History}
+Make a nice table showing that this is v1 and it is in effect from March 2021
+
+\section{Objective}
+Explain what this standard does and why we are making it. Make sure to mention that we also try to target EPA(?), future digital patient journals as well as interoperability
+
+\section{Application}
+Explain how to and who should use this standard. That it is to implement data export for DiGAs treating nicotine dependance.
+
+\section{Online presence and further development}
+The FHIR profiles developed for this standard can be found as a package at (simplifier), and the implementation guide (ref) is live at its canonical uri at (the url).
+
+The standard and the FHIR profiles it is based on are open source and further development of future versions take place at (github link).
+
+\section{Copyright}
+alex, authors, individual contributors to the open source repo, FHIR is copyright by them (see rehappys standard)
+
+\chapter{Background}
+
+The DiGA guide states that FHIR is the way to go
+
+\section{FHIR}
+short intro to FHIR
+
+\chapter{Specification}
+
+Here goes the profile
+
+\section{Dependencies}
+Explain that these profiles build on the core fhir spec and the basis-de spec.
+
+\section{Artifacts}
+The following profiles, extensions, valuesets and codesystems are part of this standard:
+
+(list them)
+
+You can find the implementation guide at (URI) and the released artifacts at (github releases) or (simplifier).
+
+We will list the artifacts in question here along with figures describing them. Note that we will only show and discuss the differential tables here, the resources otherwise conform to the core FHIR specification and you can view the full resources in the implementation guide.
+
+\subsection{NicotineReducingPatient}
+
+etc.. one section for each thing
+
+\chapter{Appendix}
+
+Include a FHIR bundle resource example export
+
+Include some JSON examples of each resource
+
+\end{document}
