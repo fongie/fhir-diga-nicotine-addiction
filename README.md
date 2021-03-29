@@ -2,16 +2,20 @@
 
 This repository contains sources for
 a) the FHIR profile that defines how data should be structured (`fhir-profile`)
-b) the written Standard (`document`)
+b) the [implementation guide](https://simplifier.net/guide/self-reported-nicotine-usage-diga/home) written on the Simplify project page (`implementation-guide`)
+c) the written Standard (`document`)
 
 ## Releases
-Releases contain the Standard in PDF format and the FHIR Profile artifacts. (todo)
+Releases contain the Standard in PDF format and the FHIR Profile artefacts. (todo)
 
 ## Contributions
 The standard with the FHIR profiles are actively maintained by the team at Alex Therapeutics. However, contributions are welcome from other actors who wish to use the standard. For example, if you have certain extensions you need to make for your use-case, we will happily accept PRs which modify the profiles and add to the text in the Standard, and then coordinate a new release of the Standard. You probably want to open an Issue first on this repository so that we can discuss the change. Note that any changes that include inserting new mandatory attributes (`1..1`) will likely be rejected, as that constitutes a breaking change for all implementers. However, any optional extensions or additions to value code sets can be added to the Standard without too much difficulty.
 
 ## Standard Build Instructions
 The Standard PDF is written and generated using LaTEX.
+
+## Implementation guide at Simplify
+The guide is written using markdown files in combination with an `xml` file which describes the structure of the IG. These have to be manually uploaded to Simplify when changed.
 
 ## FHIR Build Instructions
 The FHIR profiles are generated using FHIR Shorthand (link), which is a language for writing FHIR profiles and implementation guides. You can compile the profile using _sushi_ and the `*.sh*` scripts (`_genonce.sh` generates the IG if you are properly set up, see Sushi instructions)

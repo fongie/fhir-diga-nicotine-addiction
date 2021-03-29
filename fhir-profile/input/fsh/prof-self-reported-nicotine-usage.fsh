@@ -12,6 +12,8 @@ Description: "A condition of nicotine usage (F17.2 ICD-10). The condition and it
 * stage 0..0
 * evidence 0..0 // important say in standard: we do not try to evaluate the clinical condition. we only record that F17.2 is being treated and what the patient self-reports
 * clinicalStatus 0..0 // see above, point out in text that we do NOT evaluate clinical status, it is self reported (refer to the plan extension)
+* subject only Reference(SelfReportedNicotineUsingPatient or Patient)
+* code 1..1
 * code.coding ^slicing.discriminator.type = #pattern
 * code.coding ^slicing.discriminator.path = "coding"
 * code.coding ^slicing.rules = #open

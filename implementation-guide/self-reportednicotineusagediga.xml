@@ -1,0 +1,40 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <url value="https://simplifier.net/guide/self-reported-nicotine-usage-diga" />
+  <version value="0.1.0" />
+  <name value="Self-reported nicotine usage DiGA" />
+  <status value="draft" />
+  <description value="An implementation guide to the FHIR profile for DiGAs that treat self-reported nicotine usage." />
+  <fhirVersion value="4.0.0" />
+  <definition>
+    <page>
+      <nameUrl value="Home.md" />
+      <title value="Home" />
+      <generation value="markdown" />
+      <page>
+        <nameUrl value="Representinganappuserpatient.md" />
+        <title value="Representing an app user/patient" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="Representingthecondition.md" />
+        <title value="Representing the condition" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="RepresentingtheDiGAcareprogram.md" />
+        <title value="Representing the DiGA care program" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="Representingappactivities.md" />
+        <title value="Representing app activities" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="Exportingpatientdata.md" />
+        <title value="Exporting patient data" />
+        <generation value="markdown" />
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>
