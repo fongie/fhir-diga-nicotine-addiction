@@ -11,55 +11,55 @@ Description: "Common interventions for nicotine use"
 * #drink-water "Drink Water" "Taking a glass of water"
 * #imagine-your-future "Imagining your future" "Imagining your future"
 * #squats "Squats" "Do some squats"
-* #luxury_breakfast "Luxury Breakfast" "Have a luxurious breakfast"
-* #seven_min_workout "Seven Minute Workout" "Workout for seven minutes"
+* #luxury-breakfast "Luxury Breakfast" "Have a luxurious breakfast"
+* #seven-min-workout "Seven Minute Workout" "Workout for seven minutes"
 * #rerun "Rerun" "Watch a re-run of your favourite show"
 * #snack "Have a snack" "Have a snack"
-* #paus_timer
-* #altruism
+* #paus-timer "Time out" "Do something else for a while"
+* #altruism "Give & Take" "Do something nice for someone"
 * #powernap "Powernap" "Take a power-nap"
 * #focus "Focus" "Focus on something else"
-* #serotonin_boost
-* #phone_a_friend "Phone a friend" "Phone a friend"
-* #level_up
-* #home_spa
-* #recharge
-* #wash_up
-* #tidy_up
-* #think_of_someone
-* #nature_experience
-* #have_a_laugh
-* #brush_teeth "Brush your teeth" "Brush your teeth"
-* #best_friend
+* #serotonin-boost "Serotonin boost" "Move around to get a boost"
+* #phone-a-friend "Phone a friend" "Phone a friend"
+* #level-up "Level up" "Level up in your favourite game"
+* #home-spa "Home spa" "Take a nice warm bath"
+* #recharge "Recharge" "Schedule time to recharge"
+* #wash-up "Wash up" "Do household chores such as the dishes"
+* #tidy-up "Tidy up" "Tidy up around the house"
+* #think-of-someone "Think of someone" "Think of someone you haven't thought of in a while"
+* #nature-experience "Nature experience" "Plan a hike or fishing trip"
+* #have-a-laugh "Have a laugh" "Watch a funny video or think of a silly memory"
+* #brush-teeth "Brush your teeth" "Brush your teeth"
+* #best-friend "Best friend" "Make a no-smoking pact with a friend"
 * #sing "Sing" "Sing"
 * #breathing "Breathing" "Deep breathing"
-* #prioritize
-* #cold_splash
-* #tap_on_shoulder
-* #hug
-* #save_for_your_dream
-* #final_no
-* #youtube
-* #pet_animal
-* #chewing_gum
-* #dance_off
-* #dress_up
-* #mindful_listening
+* #prioritize "Prioritize" "Review your plans for the coming days"
+* #cold-splash "Cold splash" "Splash cold water on your face"
+* #tap-on-shoulder "Tap on shoulder" "Find someone close by and have a quick chat"
+* #hug "Hug" "Give someone a hug"
+* #save-for-your-dream "Save for your dream" "Save the money you don’t spend on cigarettes for your next vacation"
+* #final-no "Final no" "When offered a cigarette, say 'No, thanks!' one last time"
+* #youtube "Youtube" "Watch a few videos on youtube"
+* #pet-animal "Pet a pet" "Pet an animal to reduce stress"
+* #chewing-gum "Chewing gum" "Have a piece of gum instead of smoking"
+* #dance-off "Dance off" "Let go and let your body guide you"
+* #dress-up "Dress up" "Give yourself a little extra time to spend on your look today"
+* #mindful-listening "Mindful listening" "Listen to music"
 * #coffee "Coffee" "Have a coffee"
-* #swap_coffee_for_tea
-* #small_steps_big_goal
-* #price_of_a_pack
+* #swap-coffee-for-tea "Swap coffee for tea" "Have a cup of tea instead of coffee"
+* #small-steps-big-goal "Small steps big goal" "Take a small step towards a big goal"
+* #price-of-a-pack "Price of a pack" "Buy something else for the price of a cigarette pack"
 * #stroll "Stroll" "Take a stroll"
 * #bath "Bath" "Take a bath"
-* #fruit
-* #alone_time
-* #sports
-* #reverse_routine
-* #book_a_date
-* #lose_yourself
+* #fruit "Fruit" "Have a fruit"
+* #alone-time "Alone time" "Treat yourself to some alone time"
+* #sports "Sports" "Schedule time with a friend to play sports"
+* #reverse-routine "Reverse routine" "Start your morning differently to avoid falling into old habits"
+* #book-a-date "Book a date" "Ask your loved one on a date"
+* #lose-yourself "Lose yourself" "Take a different route to work"
 * #jog "Job" "Take a jog"
-* #portable_hobby
-* #drawing
-* #change_surroundings
-* #learn_something_new
-* #fresh_breaths
+* #portable-hobby "Portable hobby" "Perform a hobby on the go"
+* #drawing "Drawing" "Draw something for a while"
+* #change-surroundings "Change surroundings" "Move to another room"
+* #learn-something-new "Learn something new" "Research something new"
+* #fresh-breaths "Fresh breaths" "Step out and take 10 deep breaths"

@@ -30,25 +30,14 @@ InstanceOf: NicotineUsageTreatmentPlan
 * extension[SelfReportedSmokingStatus][2].extension[reportedOn].valueDate = "2021-03-01"
 * extension[SelfReportedSmokingStatus][2].extension[status].valueCodeableConcept = SelfReportedStatusCodeSystem#quit-smoking
 * created = "2021-01-01"
-* addresses[selfReportedNicotineUsage] = Reference(InlineCondition)
+* addresses[selfReportedNicotineUsage] = Reference(SelfReportedNicotineUsageExample)
 * status = #active
 * intent = #plan
-* subject = Reference(InlinePatient)
+* subject = Reference(SelfReportedNicotineUsingPatientExample)
 * description = 
     """
     A treatment plan using the Eila DiGA.
-    This is a CBT-based treatment plan where the patient progress towards quitting smoking by cutting down on cigarettes for a period of time.
-    The patient has activities like logging their cigarettes, their triggers, ... etc
-    TODO
+    This is a CBT-based treatment plan for nicotine usage where the patient progress towards quitting smoking by cutting down on cigarettes for a period of time.
+    The patient has activities like logging their cigarettes, their triggers, and finding out which interventions are effective for them.
+    ... And so on (example)
     """
-
-Instance: InlineCondition
-InstanceOf: SelfReportedNicotineUsage
-Usage: #inline
-* extension[SelfReportedSmokingStatus].extension[status].valueCodeableConcept = SelfReportedStatusCodeSystem#quit-smoking
-* extension[SelfReportedSmokingStatus].extension[reportedOn].valueDate = "2021-03-01"
-* subject = Reference(InlinePatient)
-
-Instance: InlinePatient
-InstanceOf: NicotineReducingPatient
-Usage: #inline

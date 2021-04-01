@@ -12,7 +12,7 @@ Instance: SelfReportedNicotineUsingPatientExample
 Description: "An example of a self reporting nicotine using patient, who has been found to have a common nicotine trigger when 'waiting', and that an effective intervention has been to 'drink water'."
 InstanceOf: SelfReportedNicotineUsingPatient
 * extension[NicotineTrigger][0].valueCodeableConcept = TriggerCodeSystem#waiting
-* extension[EffectiveNicotineIntervention][0].valueCodeableConcept = EffectiveInterventionCodeSystem#drink-water
+* extension[EffectiveNicotineIntervention][0].valueString = "drink water"
 * active = true
 * name.use = #nickname
 * name.given = "Max"

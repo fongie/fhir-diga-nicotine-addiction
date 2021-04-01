@@ -8,3 +8,7 @@
 *.pdf
 *.run.xml
 *.synctex.gz
+*.out
+*.toc
+*.tex
+!standard.tex

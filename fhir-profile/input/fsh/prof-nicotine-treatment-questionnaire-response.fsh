@@ -15,24 +15,20 @@ An example of a response to a nicotine treatment questionnaire.
 In this case, the reply must be from the TriggerCode valueset. The patient answered this time that he/she was 'waiting' for something, and that triggered them to smoke.
 """
 InstanceOf: NicotineTreatmentQuestionnaireResponse
-* questionnaire = Canonical(InlineQuestionnaire)
-* source = Reference(InlinePatient)
+* questionnaire = Canonical(QuestionnaireExample)
+* source = Reference(SelfReportedNicotineUsingPatientExample)
 * status = #completed
 * item[0].linkId = "TRIGGER"
 * item[0].answer[0].valueCoding = TriggerCodeSystem#waiting
 
-Instance: InlineQuestionnaire
+Instance: QuestionnaireExample
 InstanceOf: NicotineTreatmentQuestionnaire
 Usage: #inline
 * title = "Logging a trigger"
-* description = "This questionnaire asks the patient what trigger they feel right now"
+* description = "This questionnaire asks the patient what they are feeling or which situation they are in right now"
 * purpose = "This enables the patient to understand their own triggers, as well as for the DiGA to gain information on which triggers are common for this patient"
 * status = #active
 * item[0].linkId = "TRIGGER"
 * item[0].type = #choice
 * item[0].text = "In what situation are you right now?"
 * item[0].answerValueSet = Canonical(TriggerCode)
-
-Instance: InlinePatient
-InstanceOf: SelfReportedNicotineUsingPatient
-Usage: #inline
