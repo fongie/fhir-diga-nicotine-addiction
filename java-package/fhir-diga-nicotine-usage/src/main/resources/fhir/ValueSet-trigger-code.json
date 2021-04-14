@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "TriggerCode",
+  "id": "trigger-code",
+  "title": "Trigger Code",
+  "description": "A common trigger for using nicotine",
+  "version": "0.1.0",
+  "url": "http://www.alextherapeutics.com/fhir/ValueSet/trigger-code",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.alextherapeutics.com/fhir/CodeSystem/trigger-code-system"
+      }
+    ]
+  }
+}

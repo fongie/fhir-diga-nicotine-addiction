@@ -1,0 +1,142 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "nicotine-usage-treatment-plan",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Care Provision"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://www.alextherapeutics.com/fhir/StructureDefinition/nicotine-usage-treatment-plan",
+  "version": "0.1.0",
+  "name": "NicotineUsageTreatmentPlan",
+  "title": "Nicotine Usage Treatment Plan",
+  "status": "active",
+  "description": "A treatment plan for nicotine usage.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "CarePlan",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CarePlan",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CarePlan.extension",
+        "path": "CarePlan.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "CarePlan.extension:selfReportedSmokingStatus",
+        "path": "CarePlan.extension",
+        "sliceName": "selfReportedSmokingStatus",
+        "short": "A report made by the patient him/herself on his/her smoking status.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-smoking-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.intent",
+        "path": "CarePlan.intent",
+        "patternCode": "plan"
+      },
+      {
+        "id": "CarePlan.description",
+        "path": "CarePlan.description",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.subject",
+        "path": "CarePlan.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-nicotine-using-patient",
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.created",
+        "path": "CarePlan.created",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.addresses",
+        "path": "CarePlan.addresses",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "addresses"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "CarePlan.addresses:selfReportedNicotineUsage",
+        "path": "CarePlan.addresses",
+        "sliceName": "selfReportedNicotineUsage",
+        "short": "The self-reported condition of nicotine usage treated by this plan",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-nicotine-usage",
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

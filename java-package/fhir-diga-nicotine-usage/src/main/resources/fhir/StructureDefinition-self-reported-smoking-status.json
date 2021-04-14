@@ -1,0 +1,145 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "self-reported-smoking-status",
+  "url": "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-smoking-status",
+  "version": "0.1.0",
+  "name": "SelfReportedSmokingStatus",
+  "title": "Self Reported Smoking Status",
+  "status": "active",
+  "description": "A report on the smoking status made by the patient him/herself at a point in time. Used for example when a digital application asks the patient if they are smoke free, or when a patient reports that they have relapsed.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Self Reported Smoking Status",
+        "definition": "A report on the smoking status made by the patient him/herself at a point in time. Used for example when a digital application asks the patient if they are smoke free, or when a patient reports that they have relapsed."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 2
+      },
+      {
+        "id": "Extension.extension:reportedOn",
+        "path": "Extension.extension",
+        "sliceName": "reportedOn",
+        "short": "The date this report was made",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:reportedOn.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:reportedOn.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "reportedOn"
+      },
+      {
+        "id": "Extension.extension:reportedOn.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:reportedOn.valueDate",
+        "path": "Extension.extension.valueDate",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:status",
+        "path": "Extension.extension",
+        "sliceName": "status",
+        "short": "The status that was reported",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:status.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:status.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "status"
+      },
+      {
+        "id": "Extension.extension:status.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:status.valueCodeableConcept",
+        "path": "Extension.extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://www.alextherapeutics.com/fhir/ValueSet/self-reported-smoking-status-code"
+        }
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-smoking-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

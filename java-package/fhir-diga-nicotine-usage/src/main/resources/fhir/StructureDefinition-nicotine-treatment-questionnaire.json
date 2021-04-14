@@ -1,0 +1,77 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "nicotine-treatment-questionnaire",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Specialized.Definitional Artifacts"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "business"
+    }
+  ],
+  "url": "http://www.alextherapeutics.com/fhir/StructureDefinition/nicotine-treatment-questionnaire",
+  "version": "0.1.0",
+  "name": "NicotineTreatmentQuestionnaire",
+  "title": "Nicotine Treatment Questionnaire",
+  "status": "active",
+  "description": "A questionnaire belonging to a nicotine reducing care program.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "objimpl",
+      "uri": "http://hl7.org/fhir/object-implementation",
+      "name": "Object Implementation Information"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Questionnaire",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Questionnaire",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Questionnaire.url",
+        "path": "Questionnaire.url",
+        "min": 1
+      },
+      {
+        "id": "Questionnaire.title",
+        "path": "Questionnaire.title",
+        "min": 1
+      },
+      {
+        "id": "Questionnaire.description",
+        "path": "Questionnaire.description",
+        "min": 1
+      },
+      {
+        "id": "Questionnaire.purpose",
+        "path": "Questionnaire.purpose",
+        "min": 1
+      }
+    ]
+  }
+}

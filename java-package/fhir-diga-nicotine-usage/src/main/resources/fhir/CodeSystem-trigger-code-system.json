@@ -1,0 +1,129 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "TriggerCodeSystem",
+  "id": "trigger-code-system",
+  "title": "Trigger Code System",
+  "description": "Code system containing common triggers for using nicotine.",
+  "version": "0.1.0",
+  "url": "http://www.alextherapeutics.com/fhir/CodeSystem/trigger-code-system",
+  "concept": [
+    {
+      "code": "waiting",
+      "display": "Waiting",
+      "definition": "Waiting for something or someone"
+    },
+    {
+      "code": "bed",
+      "display": "Bed",
+      "definition": "Going to bed"
+    },
+    {
+      "code": "walking",
+      "display": "Walking",
+      "definition": "Walking"
+    },
+    {
+      "code": "sex",
+      "display": "Sex",
+      "definition": "After sex"
+    },
+    {
+      "code": "on_break",
+      "display": "Break",
+      "definition": "Taking a break, for example at work"
+    },
+    {
+      "code": "lonely",
+      "display": "Lonely",
+      "definition": "Feeling lonely"
+    },
+    {
+      "code": "down",
+      "display": "Down",
+      "definition": "Felling down"
+    },
+    {
+      "code": "talking_on_phone",
+      "display": "Talking on the phone",
+      "definition": "Talking on the phone"
+    },
+    {
+      "code": "celebrating",
+      "display": "Celebrating",
+      "definition": "Celebrating something"
+    },
+    {
+      "code": "fiddling",
+      "display": "Needing to fiddle",
+      "definition": "Feeling the need to fiddle with something"
+    },
+    {
+      "code": "irritated",
+      "display": "Irritated",
+      "definition": "Feeling irritated"
+    },
+    {
+      "code": "withdrawal",
+      "display": "Withdrawal",
+      "definition": "Nicotine withdrawal"
+    },
+    {
+      "code": "waking_up",
+      "display": "Waking up",
+      "definition": "Just after waking up"
+    },
+    {
+      "code": "taste",
+      "display": "Taste",
+      "definition": "Wanting the taste of smoking"
+    },
+    {
+      "code": "bored",
+      "display": "Bored",
+      "definition": "Feeling bored"
+    },
+    {
+      "code": "anxious",
+      "display": "Anxious",
+      "definition": "Feeling anxious"
+    },
+    {
+      "code": "happy",
+      "display": "Happy",
+      "definition": "Feeling happy"
+    },
+    {
+      "code": "sad",
+      "display": "Sad",
+      "definition": "Feeling sad"
+    },
+    {
+      "code": "coffee",
+      "display": "Coffee",
+      "definition": "Having coffee"
+    },
+    {
+      "code": "alcohol",
+      "display": "Alcohol",
+      "definition": "Drinking alcohol"
+    },
+    {
+      "code": "eating",
+      "display": "Eating",
+      "definition": "When eating"
+    },
+    {
+      "code": "stressed",
+      "display": "Stressed",
+      "definition": "Feeling stressed"
+    },
+    {
+      "code": "driving",
+      "display": "Driving",
+      "definition": "When driving"
+    }
+  ],
+  "count": 23
+}

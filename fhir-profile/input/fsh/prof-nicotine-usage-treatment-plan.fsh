@@ -1,3 +1,21 @@
+/*
+ * Copyright 2021-2021 Alex Therapeutics AB and individual contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ */
+
 Profile: NicotineUsageTreatmentPlan
 Id: nicotine-usage-treatment-plan
 Title: "Nicotine Usage Treatment Plan"
@@ -24,11 +42,11 @@ The description of the plan contains a summary explanation of what the DiGA does
 """
 InstanceOf: NicotineUsageTreatmentPlan
 * extension[SelfReportedSmokingStatus][0].extension[reportedOn].valueDate = "2021-01-01"
-* extension[SelfReportedSmokingStatus][0].extension[status].valueCodeableConcept = SelfReportedStatusCodeSystem#actively-smoking
+* extension[SelfReportedSmokingStatus][0].extension[status].valueCodeableConcept = SelfReportedStatusCodeSystem#actively_smoking
 * extension[SelfReportedSmokingStatus][1].extension[reportedOn].valueDate = "2021-02-01"
-* extension[SelfReportedSmokingStatus][1].extension[status].valueCodeableConcept = SelfReportedStatusCodeSystem#cutting-down
+* extension[SelfReportedSmokingStatus][1].extension[status].valueCodeableConcept = SelfReportedStatusCodeSystem#cutting_down
 * extension[SelfReportedSmokingStatus][2].extension[reportedOn].valueDate = "2021-03-01"
-* extension[SelfReportedSmokingStatus][2].extension[status].valueCodeableConcept = SelfReportedStatusCodeSystem#quit-smoking
+* extension[SelfReportedSmokingStatus][2].extension[status].valueCodeableConcept = SelfReportedStatusCodeSystem#quit_smoking
 * created = "2021-01-01"
 * addresses[selfReportedNicotineUsage] = Reference(SelfReportedNicotineUsageExample)
 * status = #active

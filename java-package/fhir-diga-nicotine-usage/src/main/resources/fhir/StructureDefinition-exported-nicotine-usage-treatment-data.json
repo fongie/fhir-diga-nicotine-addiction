@@ -1,0 +1,246 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "exported-nicotine-usage-treatment-data",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Documents"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "http://www.alextherapeutics.com/fhir/StructureDefinition/exported-nicotine-usage-treatment-data",
+  "version": "0.1.0",
+  "name": "ExportedNicotineUsageTreatmentData",
+  "title": "Exported Nicotine Usage Treatment Data",
+  "status": "active",
+  "description": "A bulk export containing all data pertaining to a single patient being treated for nicotine usage",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "fhirdocumentreference",
+      "uri": "http://hl7.org/fhir/documentreference",
+      "name": "FHIR DocumentReference"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "patternCode": "final"
+      },
+      {
+        "id": "Composition.type.text",
+        "path": "Composition.type.text",
+        "patternString": "DiGA Data Export"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-nicotine-using-patient",
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "section"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 5
+      },
+      {
+        "id": "Composition.section:patientData",
+        "path": "Composition.section",
+        "sliceName": "patientData",
+        "short": "Data on the self-reported nicotine-using patient",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:patientData.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Self-reported nicotine-using patientdata",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:patientData.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-nicotine-using-patient",
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:selfReportedCondition",
+        "path": "Composition.section",
+        "sliceName": "selfReportedCondition",
+        "short": "Data on the self-reported condition of nicotine usage",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:selfReportedCondition.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Self-reported nicotine-usage condition",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:selfReportedCondition.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-nicotine-usage",
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:nicotineUsageTreatmentPlan",
+        "path": "Composition.section",
+        "sliceName": "nicotineUsageTreatmentPlan",
+        "short": "The treatment plan for the self-reported nicotine usage",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:nicotineUsageTreatmentPlan.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Nicotine usage treatment plan",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:nicotineUsageTreatmentPlan.entry",
+        "path": "Composition.section.entry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/nicotine-usage-treatment-plan",
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:questionnaires",
+        "path": "Composition.section",
+        "sliceName": "questionnaires",
+        "short": "Definitions for questionnaires during the nicotine usage treatment",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:questionnaires.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Questionnaire definitions",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:questionnaires.entry",
+        "path": "Composition.section.entry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/nicotine-treatment-questionnaire",
+              "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:questionnaireResponses",
+        "path": "Composition.section",
+        "sliceName": "questionnaireResponses",
+        "short": "Questionnaire responses by the patient during the nicotine treatment",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:questionnaireResponses.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Questionnaire responses",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:questionnaireResponses.entry",
+        "path": "Composition.section.entry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/nicotine-treatment-questionnaire-response",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "EffectiveInterventionCode",
+  "id": "effective-intervention-code",
+  "title": "Effective Intervention Code",
+  "description": "An effective intervention",
+  "version": "0.1.0",
+  "url": "http://www.alextherapeutics.com/fhir/ValueSet/effective-intervention-code",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.alextherapeutics.com/fhir/CodeSystem/effective-intervention-code-system"
+      }
+    ]
+  }
+}

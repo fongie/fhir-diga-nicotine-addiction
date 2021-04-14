@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "SelfReportedSmokingStatusCode",
+  "id": "self-reported-smoking-status-code",
+  "title": "Self Reported Smoking Status Code",
+  "description": "A self-reported smoking status",
+  "version": "0.1.0",
+  "url": "http://www.alextherapeutics.com/fhir/ValueSet/self-reported-smoking-status-code",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.alextherapeutics.com/fhir/CodeSystem/self-reported-status-code-system"
+      }
+    ]
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "EffectiveInterventionCodeSystem",
+  "id": "effective-intervention-code-system",
+  "title": "Effective Intervention Code System",
+  "description": "Common interventions for nicotine use",
+  "version": "0.1.0",
+  "url": "http://www.alextherapeutics.com/fhir/CodeSystem/effective-intervention-code-system",
+  "concept": [
+    {
+      "code": "drink-water",
+      "display": "Drink Water",
+      "definition": "Taking a glass of water"
+    },
+    {
+      "code": "imagine-your-future",
+      "display": "Imagining your future",
+      "definition": "Imagining your future"
+    },
+    {
+      "code": "squats",
+      "display": "Squats",
+      "definition": "Do some squats"
+    },
+    {
+      "code": "luxury-breakfast",
+      "display": "Luxury Breakfast",
+      "definition": "Have a luxurious breakfast"
+    },
+    {
+      "code": "seven-min-workout",
+      "display": "Seven Minute Workout",
+      "definition": "Workout for seven minutes"
+    },
+    {
+      "code": "rerun",
+      "display": "Rerun",
+      "definition": "Watch a re-run of your favourite show"
+    },
+    {
+      "code": "snack",
+      "display": "Have a snack",
+      "definition": "Have a snack"
+    },
+    {
+      "code": "paus-timer",
+      "display": "Time out",
+      "definition": "Do something else for a while"
+    },
+    {
+      "code": "altruism",
+      "display": "Give & Take",
+      "definition": "Do something nice for someone"
+    },
+    {
+      "code": "powernap",
+      "display": "Powernap",
+      "definition": "Take a power-nap"
+    },
+    {
+      "code": "focus",
+      "display": "Focus",
+      "definition": "Focus on something else"
+    },
+    {
+      "code": "serotonin-boost",
+      "display": "Serotonin boost",
+      "definition": "Move around to get a boost"
+    },
+    {
+      "code": "phone-a-friend",
+      "display": "Phone a friend",
+      "definition": "Phone a friend"
+    },
+    {
+      "code": "level-up",
+      "display": "Level up",
+      "definition": "Level up in your favourite game"
+    },
+    {
+      "code": "home-spa",
+      "display": "Home spa",
+      "definition": "Take a nice warm bath"
+    },
+    {
+      "code": "recharge",
+      "display": "Recharge",
+      "definition": "Schedule time to recharge"
+    },
+    {
+      "code": "wash-up",
+      "display": "Wash up",
+      "definition": "Do household chores such as the dishes"
+    },
+    {
+      "code": "tidy-up",
+      "display": "Tidy up",
+      "definition": "Tidy up around the house"
+    },
+    {
+      "code": "think-of-someone",
+      "display": "Think of someone",
+      "definition": "Think of someone you haven't thought of in a while"
+    },
+    {
+      "code": "nature-experience",
+      "display": "Nature experience",
+      "definition": "Plan a hike or fishing trip"
+    },
+    {
+      "code": "have-a-laugh",
+      "display": "Have a laugh",
+      "definition": "Watch a funny video or think of a silly memory"
+    },
+    {
+      "code": "brush-teeth",
+      "display": "Brush your teeth",
+      "definition": "Brush your teeth"
+    },
+    {
+      "code": "best-friend",
+      "display": "Best friend",
+      "definition": "Make a no-smoking pact with a friend"
+    },
+    {
+      "code": "sing",
+      "display": "Sing",
+      "definition": "Sing"
+    },
+    {
+      "code": "breathing",
+      "display": "Breathing",
+      "definition": "Deep breathing"
+    },
+    {
+      "code": "prioritize",
+      "display": "Prioritize",
+      "definition": "Review your plans for the coming days"
+    },
+    {
+      "code": "cold-splash",
+      "display": "Cold splash",
+      "definition": "Splash cold water on your face"
+    },
+    {
+      "code": "tap-on-shoulder",
+      "display": "Tap on shoulder",
+      "definition": "Find someone close by and have a quick chat"
+    },
+    {
+      "code": "hug",
+      "display": "Hug",
+      "definition": "Give someone a hug"
+    },
+    {
+      "code": "save-for-your-dream",
+      "display": "Save for your dream",
+      "definition": "Save the money you don’t spend on cigarettes for your next vacation"
+    },
+    {
+      "code": "final-no",
+      "display": "Final no",
+      "definition": "When offered a cigarette, say 'No, thanks!' one last time"
+    },
+    {
+      "code": "youtube",
+      "display": "Youtube",
+      "definition": "Watch a few videos on youtube"
+    },
+    {
+      "code": "pet-animal",
+      "display": "Pet a pet",
+      "definition": "Pet an animal to reduce stress"
+    },
+    {
+      "code": "chewing-gum",
+      "display": "Chewing gum",
+      "definition": "Have a piece of gum instead of smoking"
+    },
+    {
+      "code": "dance-off",
+      "display": "Dance off",
+      "definition": "Let go and let your body guide you"
+    },
+    {
+      "code": "dress-up",
+      "display": "Dress up",
+      "definition": "Give yourself a little extra time to spend on your look today"
+    },
+    {
+      "code": "mindful-listening",
+      "display": "Mindful listening",
+      "definition": "Listen to music"
+    },
+    {
+      "code": "coffee",
+      "display": "Coffee",
+      "definition": "Have a coffee"
+    },
+    {
+      "code": "swap-coffee-for-tea",
+      "display": "Swap coffee for tea",
+      "definition": "Have a cup of tea instead of coffee"
+    },
+    {
+      "code": "small-steps-big-goal",
+      "display": "Small steps big goal",
+      "definition": "Take a small step towards a big goal"
+    },
+    {
+      "code": "price-of-a-pack",
+      "display": "Price of a pack",
+      "definition": "Buy something else for the price of a cigarette pack"
+    },
+    {
+      "code": "stroll",
+      "display": "Stroll",
+      "definition": "Take a stroll"
+    },
+    {
+      "code": "bath",
+      "display": "Bath",
+      "definition": "Take a bath"
+    },
+    {
+      "code": "fruit",
+      "display": "Fruit",
+      "definition": "Have a fruit"
+    },
+    {
+      "code": "alone-time",
+      "display": "Alone time",
+      "definition": "Treat yourself to some alone time"
+    },
+    {
+      "code": "sports",
+      "display": "Sports",
+      "definition": "Schedule time with a friend to play sports"
+    },
+    {
+      "code": "reverse-routine",
+      "display": "Reverse routine",
+      "definition": "Start your morning differently to avoid falling into old habits"
+    },
+    {
+      "code": "book-a-date",
+      "display": "Book a date",
+      "definition": "Ask your loved one on a date"
+    },
+    {
+      "code": "lose-yourself",
+      "display": "Lose yourself",
+      "definition": "Take a different route to work"
+    },
+    {
+      "code": "jog",
+      "display": "Job",
+      "definition": "Take a jog"
+    },
+    {
+      "code": "portable-hobby",
+      "display": "Portable hobby",
+      "definition": "Perform a hobby on the go"
+    },
+    {
+      "code": "drawing",
+      "display": "Drawing",
+      "definition": "Draw something for a while"
+    },
+    {
+      "code": "change-surroundings",
+      "display": "Change surroundings",
+      "definition": "Move to another room"
+    },
+    {
+      "code": "learn-something-new",
+      "display": "Learn something new",
+      "definition": "Research something new"
+    },
+    {
+      "code": "fresh-breaths",
+      "display": "Fresh breaths",
+      "definition": "Step out and take 10 deep breaths"
+    }
+  ],
+  "count": 55
+}

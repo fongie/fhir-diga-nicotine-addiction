@@ -1,10 +1,27 @@
-// make separate fagerstrom questionnaire profile - if new onboarding
+/*
+ * Copyright 2021-2021 Alex Therapeutics AB and individual contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ */
 
 Profile: NicotineTreatmentQuestionnaire
 Id: nicotine-treatment-questionnaire
 Title: "Nicotine Treatment Questionnaire"
 Description: "A questionnaire belonging to a nicotine reducing care program."
 Parent: Questionnaire
+* url 1..1 // needed to refer to this canonically in java via the response
 * title 1..1
 * description 1..1 // explain that this is the primary spot to look for "what was asked" for journals
 * purpose 1..1 // a manufacturer should use these fields to explain in a humnan-friendly way what this questionnaire is for and what it does
@@ -17,6 +34,7 @@ The answers are coded in valuesets containing common triggers and effective inte
 """
 InstanceOf: NicotineTreatmentQuestionnaire
 * status = #active
+* url = "http://my-url/Questionnaire/logging"
 * title = "Logging"
 * description = 
 """
@@ -41,9 +59,8 @@ This questionnaire finds out information about common triggers for the patient, 
 * item[2].text = "Are you experiencing any physical symptoms?"
 * item[2].answerValueSet = Canonical(TriggerCode)
 * item[3].linkId = "INTERVENTION"
-* item[3].type = #choice
+* item[3].type = #string
 * item[3].text = "Would you like to try an intervention?"
-* item[3].answerValueSet = Canonical(EffectiveInterventionCode)
 * item[4].linkId = "DECISION"
 * item[4].type = #choice
 * item[4].text = "Did you smoke?"

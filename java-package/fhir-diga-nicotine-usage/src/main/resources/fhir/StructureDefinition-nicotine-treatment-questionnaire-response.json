@@ -1,0 +1,73 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "nicotine-treatment-questionnaire-response",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://www.alextherapeutics.com/fhir/StructureDefinition/nicotine-treatment-questionnaire-response",
+  "version": "0.1.0",
+  "name": "NicotineTreatmentQuestionnaireResponse",
+  "title": "Nicotine Treatment Questionnaire Response",
+  "status": "active",
+  "description": "A questionnaire response dealing with nicotine as part of a treatment program",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "QuestionnaireResponse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "QuestionnaireResponse.questionnaire",
+        "path": "QuestionnaireResponse.questionnaire",
+        "min": 1
+      },
+      {
+        "id": "QuestionnaireResponse.source",
+        "path": "QuestionnaireResponse.source",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.alextherapeutics.com/fhir/StructureDefinition/self-reported-nicotine-using-patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "QuestionnaireResponse.item.answer.value[x]",
+        "path": "QuestionnaireResponse.item.answer.value[x]",
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://www.alextherapeutics.com/fhir/ValueSet/trigger-code"
+        }
+      }
+    ]
+  }
+}

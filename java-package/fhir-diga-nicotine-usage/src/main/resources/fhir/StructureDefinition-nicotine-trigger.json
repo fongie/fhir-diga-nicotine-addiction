@@ -1,0 +1,78 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "nicotine-trigger",
+  "url": "http://www.alextherapeutics.com/fhir/StructureDefinition/nicotine-trigger",
+  "version": "0.1.0",
+  "name": "NicotineTrigger",
+  "title": "Nicotine Trigger",
+  "status": "active",
+  "description": "Trigger for the patient to start using nicotine substances (like smoking a cigarette). For example, a patient's most common trigger might be that they feel an urge to smoke when they just woke up, or when they are waiting for something or someone.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Nicotine Trigger",
+        "definition": "Trigger for the patient to start using nicotine substances (like smoking a cigarette). For example, a patient's most common trigger might be that they feel an urge to smoke when they just woke up, or when they are waiting for something or someone."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.alextherapeutics.com/fhir/StructureDefinition/nicotine-trigger"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://www.alextherapeutics.com/fhir/ValueSet/trigger-code"
+        }
+      }
+    ]
+  }
+}
