@@ -13,9 +13,10 @@ There is a provided Java library which facilitates implementing the Standard. Ho
 
 ## Releases
 
-Releases prefixed with `standard-` contain the Standard in PDF format and the FHIR Profile artefacts
+Releases prefixed with `standard-` contain the Standard in PDF format and the FHIR Profile artefacts. Note to maintainers: These releases have to be created manually including uploading artefacts.
 
 Releases prefixed with `java-` contain the latest java library release.
+Note to maintainers: To create a Java release (and automatically deploy to Maven and Github Packages), create a Release with name `java-#.#.#`. The new maven version will be `#.#.#`. If you misspell `java-`, the workflow won't trigger.
 
 ## Contributions
 

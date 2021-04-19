@@ -23,20 +23,20 @@ package com.alextherapeutics.annotation;
 public @interface CompositeExtensionFromFhir {
     /**
      * The id of the extension. A 'fhir/StructureDefinition-{id}.json' must exist in the classpath.
-     * @return
+     * @return the ID
      */
     String id();
 
     /**
      * The common name of the extension in the parent resource. For example, if you had a composite extension and you name it
      * "myCompositeExtension", that should be this value.
-     * @return
+     * @return the name
      */
     String name();
 
     /**
      * Definitions for the fields contained in the composite extension.
-     * @return
+     * @return the contained extensions
      */
     ExtensionFromFhir[] extensions();
 }

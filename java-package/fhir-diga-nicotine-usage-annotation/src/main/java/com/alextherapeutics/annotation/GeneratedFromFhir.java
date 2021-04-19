@@ -30,27 +30,27 @@ import java.lang.annotation.Target;
 public @interface GeneratedFromFhir {
     /**
      * The FHIR resource ID. This must correspond to the filename of the FHIR resource, for example:
-     * StructureDefinition-exported-nicotine-usage-treatment-data.json => id = exported-nicotine-usage-treatment-data
-     * @return
+     * StructureDefinition-exported-nicotine-usage-treatment-data.json gives an id of 'exported-nicotine-usage-treatment-data'
+     * @return the ID
      */
     String id();
 
     /**
      * The type of resource this generates.
-     * @return
+     * @return the enum fhir type
      */
     FhirType type() default FhirType.PROFILE;
 
     /**
      * Extension definitions contained in this resource. Unfortunately it is not possible to generate these from the
      * FHIR files in all cases, so they are defined separately here.
-     * @return
+     * @return the extensions as a list
      */
     ExtensionFromFhir[] extensions() default {};
 
     /**
      * Composite extension definitions defined in this resource.
-     * @return
+     * @return the composite extensions as a list
      */
     CompositeExtensionFromFhir[] compositeExtensions() default {};
 }

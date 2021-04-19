@@ -21,15 +21,48 @@
     <parent>
         <artifactId>fhir-diga-nicotine-usage-parent</artifactId>
         <groupId>com.alextherapeutics</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>fhir-diga-nicotine-usage</artifactId>
 
+    <name>FHIR DiGA Nicotine Usage Library</name>
+    <url>https://github.com/alex-therapeutics/fhir-diga-nicotine-addiction</url>
+    <description>
+        Java library to implement the standard for exporting patient data for DiGAs treating nicotine addiction using CBT.
+    </description>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/alex-therapeutics/fhir-diga-nicotine-addiction.git</connection>
+        <developerConnection>scm:git:git://github.com/alex-therapeutics/fhir-diga-nicotine-addiction.git</developerConnection>
+        <url>https://github.com/alex-therapeutics/fhir-diga-nicotine-addiction</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Max Körlinge</name>
+            <email>max@alextherapeutics.com</email>
+            <organization>Alex Therapeutics</organization>
+            <organizationUrl>https://github.com/alex-therapeutics</organizationUrl>
+            <roles>
+                <role>Maintainer</role>
+            </roles>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <maven.deploy.skip>false</maven.deploy.skip>
     </properties>
 
     <dependencies>
@@ -106,4 +139,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

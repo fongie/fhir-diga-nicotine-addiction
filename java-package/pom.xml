@@ -23,17 +23,52 @@
     <groupId>com.alextherapeutics</groupId>
     <artifactId>fhir-diga-nicotine-usage-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0-SNAPSHOT</version>
     <modules>
         <module>fhir-diga-nicotine-usage-annotation</module>
         <module>fhir-diga-nicotine-usage</module>
     </modules>
+
+    <name>FHIR DiGA Nicotine Usage Parent</name>
+    <url>https://github.com/alex-therapeutics/fhir-diga-nicotine-addiction</url>
+    <description>
+        Parent POM for a java library to implement the standard for exporting patient data for DiGAs treating nicotine addiction using CBT.
+        To use the library, you should import the 'fhir-diga-nicotine-usage' module only.
+    </description>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/alex-therapeutics/fhir-diga-nicotine-addiction.git</connection>
+        <developerConnection>scm:git:git://github.com/alex-therapeutics/fhir-diga-nicotine-addiction.git</developerConnection>
+        <url>https://github.com/alex-therapeutics/fhir-diga-nicotine-addiction</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Max Körlinge</name>
+            <email>max@alextherapeutics.com</email>
+            <organization>Alex Therapeutics</organization>
+            <organizationUrl>https://github.com/alex-therapeutics</organizationUrl>
+            <roles>
+                <role>Maintainer</role>
+            </roles>
+        </developer>
+    </developers>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <hapi-fhir.version>5.3.0</hapi-fhir.version>
         <lombok.version>1.18.12</lombok.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
     <dependencyManagement>
@@ -112,4 +147,94 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Github Packages</name>
+           <url>https://maven.pkg.github.com/alex-therapeutics/fhir-diga-nicotine-addiction</url>
+        </repository>
+    </distributionManagement>
+    <profiles>
+        <profile>
+            <id>maven</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+                <repository>
+                    <id>ossrh</id>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                </repository>
+            </distributionManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.8</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://s01.oss.sonatype.org</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.2.0</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
