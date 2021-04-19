@@ -27,8 +27,10 @@ jobs:
             ${{ runner.os }}-maven-
       - run: mvn org.codehaus.mojo:versions-maven-plugin:2.7:set -DnewVersion=${GITHUB_REF##*/java-}
         if: ${{ contains(github.ref, 'java-') }}
+        working-directory: ${{env.workdir}}
       - run: mvn -Prelease,maven deploy
         if: ${{ contains(github.ref, 'java-') }}
+        working-directory: ${{env.workdir}}
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_CENTRAL_USER }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
