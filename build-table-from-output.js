@@ -57,6 +57,10 @@ console.info('Done')
 // ---------------------------------------------------------------------------------------------------------
 // functions
 
+function escape(line) {
+    return line.replace(/\_/g, '\\_')
+}
+
 function buildTableFromCodeSystem(json, igJson) {
     const name = json.name
     const bookTabsHeader =
@@ -69,7 +73,7 @@ function buildTableFromCodeSystem(json, igJson) {
     const structureHeader = `
 \\textbf{${name}} & \\textbf{${json.description}}  \\\\ \\midrule
 `
-    const rows = json.concept.map(item => `${item.code} & ${item.definition} \\\\`)
+    const rows = json.concept.map(item => `${escape(item.code)} & ${item.definition} \\\\`)
     const elements = rows.join('\n').concat('\\bottomrule')
     const bookTabsEnd = `
 \\end{tabular}
