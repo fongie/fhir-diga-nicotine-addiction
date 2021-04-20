@@ -1,4 +1,4 @@
-\documentclass[12px]{report}
+\documentclass{report}
 
 % Copyright 2021-2021 Alex Therapeutics AB and individual contributors.
 
@@ -14,11 +14,13 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
+\usepackage[hyphens]{url}
 \usepackage{xcolor}
 \usepackage[style=numeric,sorting=none,backend=biber]{biblatex}
 \addbibresource{references.bib} % The file containing our references, in BibTeX format
 \usepackage{csquotes} % Recommended by biblatex
 \usepackage[colorlinks=true,linkcolor=violet]{hyperref}
+\usepackage{breakurl}
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage[all]{hypcap} %jump to img instead of caption text
@@ -43,6 +45,8 @@
         }
     }
 \def\code#1{\texttt{#1}} %format for \code text
+
+\hyphenation{ExportedNicotineUsage-TreatmentData}
 
 \newcommand{\fhir}{FHIR\textsuperscript{\textregistered}}
 \newcommand{\hl}{HL7\textsuperscript{\textregistered}}
@@ -115,7 +119,7 @@ Anyone may raise issues or suggest changes to the Standard which can be incorpor
 
 \begin{itemize}
     \item The Standard, which is this document and the attached FHIR artefacts, is licensed under the Creative Commons Attribution 4.0 International License. 
-To view a copy of this license, visit \href{http://creativecommons.org/licenses/by/4.0/}{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+To view a copy of this license, visit \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 Copyright for the Standard is held by Alex Therapeutics AB. 
     \item The source code for the Standard is licensed under the Apache 2.0 license. 
 You can read a copy of this license in the \href{https://github.com/alex-therapeutics/diga-nicotine-usage-fhir/blob/main/LICENSE}{GitHub project} \cite{github}.
@@ -190,7 +194,7 @@ The profiles in the Standard depend on the core \fhir \cite{FHIR} profiles, and 
 The Standard deals with exporting patient data concerning their DiGA nicotine addiction treatment in general,
 but in particular with exporting a \textit{single patient's} data as one document. This is a DiGA requirement.
 
-When exporting a single patient's data, implementers \textbf{must} use the \code{Bundle} \fhir resource \cite{bundle}. A bundle \textbf{must} contain an \code{ExportedNicotineUsageTreatmentData} resource (see \ref{sec:comp}), which is a profile on \code{Composition},
+When exporting a single patient's data, implementers \textbf{must} use the \code{Bundle} \fhir resource \cite{bundle}. A bundle \textbf{must} contain an \code{ExportedNicotineUsage-\allowbreak TreatmentData} resource (see \ref{sec:comp}), which is a profile on \code{Composition},
 which defines metadata about what is contained in the bundle and where to find it. Next, the bundle must contain all resources pointed to in the composition. In this way, it is possible
 to export all relevant data for a single patient in one document using the Standard. There is an example of a full patient export in Appendix \ref{app:ex}.
 
@@ -228,7 +232,7 @@ We will list the artifacts here in the context of how to use them along with fig
 
 \subsection{Representing a patient}
 \tabpatient
-The patient, who is a user of the DiGA, will be represented using the \code{SelfReportedNicotineUsingPatient} resource (Table \ref{tab:SelfReportedNicotineUsingPatient}). This resource should be used when the patient is not supervised by a medical professional in the context of the DiGA, which means the
+The patient, who is a user of the DiGA, will be represented using the \code{Self-\allowbreak ReportedNicotineUsingPatient} resource (Table \ref{tab:SelfReportedNicotineUsingPatient}). This resource should be used when the patient is not supervised by a medical professional in the context of the DiGA, which means the
 patient is \textit{self reporting}.
 
 Since there will be different information available on the patient for different DiGAs, this is a flexible profile allowing all defaults on \code{Patient}. 
@@ -278,7 +282,7 @@ Often, the patient also answers questionnaires about various things, to gather i
 One especially frequent questionnaire is the Fagerström test used to measure the addiction level of a patient \cite{fagerstrom}.
 
 To represent these activities, logging and questionnaires, implementers should use \code{NicotineTreatmentQuestionnaire} (Table \ref{tab:NicotineTreatmentQuestionnaire}) to define how the questionnaire is presented in the application, 
-and \code{NicotineTreatmentQuestionnaireResponse} (Table \ref{tab:NicotineTreatmentQuestionnaireResponse}) to represent an individual patient's response to it. It is required to give a \code{title}, \code{description} and \code{purpose} to the questionnaire to explain what it does.
+and \code{NicotineTreatmentQuestionnaire-\allowbreak Response} (Table \ref{tab:NicotineTreatmentQuestionnaireResponse}) to represent an individual patient's response to it. It is required to give a \code{title}, \code{description} and \code{purpose} to the questionnaire to explain what it does.
 Implementers are encouraged to use the \code{TriggerCode} and \code{EffectiveInterventionCode} value sets when they are appropriate as answers. There is a sample questionnaire and response in the bundle example in Appendix \ref{app:ex},
 and there are more examples available in the Simplifier.net project \cite{project}.
 

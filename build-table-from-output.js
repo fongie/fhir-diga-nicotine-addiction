@@ -65,7 +65,8 @@ function buildTableFromCodeSystem(json, igJson) {
     const name = json.name
     const bookTabsHeader =
         `
-\\begin{table}[]\\centering
+\\begin{table}[]
+\\centering
 \\begin{tabular}{@{}ll@{}}
 \\toprule
 \\multicolumn{1}{c}{code}               & \\multicolumn{1}{c}{definition}       \\\\ \\midrule
