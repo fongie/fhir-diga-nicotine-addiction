@@ -65,16 +65,15 @@ function buildTableFromCodeSystem(json, igJson) {
     const name = json.name
     const bookTabsHeader =
         `
-\\begin{table}[]
-\\centering
+\\begin{table}[]\\centering
 \\begin{tabular}{@{}ll@{}}
 \\toprule
 \\multicolumn{1}{c}{code}               & \\multicolumn{1}{c}{definition}       \\\\ \\midrule
 `
     const structureHeader = `
-\\textbf{${name}} & \\textbf{${json.description}}  \\\\ \\midrule
+\\textbf{${boxed(name)}} & \\textbf{${boxed(json.description)}}  \\\\ \\midrule
 `
-    const rows = json.concept.map(item => `${escape(item.code)} & ${item.definition} \\\\`)
+    const rows = json.concept.map(item => `${boxed(escape(item.code))} & ${boxed(item.definition)} \\\\`)
     const elements = rows.join('\n').concat('\\bottomrule')
     const bookTabsEnd = `
 \\end{tabular}
@@ -125,12 +124,19 @@ function buildTabRow(item, snapshots, type) {
     const rowName = getRowName(item)
     const cardMin = item.min !== undefined ? item.min : snapshots.find(el => el.id === item.id).min //|| 0
     const cardMax = item.max || snapshots.find(el => el.id === item.id).max
-    const rowType = getType(item, snapshots, type)
+    const rowType = breakUris(getType(item, snapshots, type))
     if (rowType === undefined) {
         console.warn(`${rowName} had undefined type. ignoring`)
         return ''
     }
-    return `${rowName} & ${cardMin}..${cardMax} & ${rowType} \\\\`
+    return `${rowName} & ${cardMin}..${cardMax} & ${boxed(rowType)} \\\\`
+}
+function breakUris(type) {
+    return type.replace('http://www.alextherapeutics.com/fhir/', 'http://www.alextherapeutics.com/fhir/\\allowbreak ')
+}
+
+function boxed(item) {
+    return `\\parbox{0.5\\linewidth}{${item}}`
 }
 
 function getRowName(item) {
