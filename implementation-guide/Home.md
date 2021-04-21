@@ -4,6 +4,6 @@ This guide describes how to implement the FHIR resources located in the [treat-n
 
 The FHIR resources included in this package are used for Digital Health Applications (DiGAs) that treat nicotine usage (F17.2 ICD-10) using methods from cognitive behavioural therapy for patients who self-report to the DiGA without involvement from medical professionals.
 
-There is a more extensive text available in the standard submitted to the [vesta directory ](https://www.alextherapeutics.com).
+There is a more extensive text available in the standard submitted to the [vesta directory](https://github.com/alex-therapeutics/fhir-diga-nicotine-addiction/releases/download/standard-1.0/standard.pdf).
 
 {{index:root}}
