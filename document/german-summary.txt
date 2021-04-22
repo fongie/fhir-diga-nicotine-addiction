@@ -1,0 +1,10 @@
+English:
+
+This standard defines new profiles, extensions, and code systems based on the internationally recognized HL7®FHIR® standard, for the purpose of exporting data  in  a  standard  format  by  Digital  Health  Applications  that  treat  nicotine addiction by using methods based in Cognitive Behavioural Therapy.  The standard consists of a document together with FHIR artefacts which can be used to implement the standard. There is also an open source Java library available on GitHub (see additional URLs) to facilitate implementation.
+
+The specification provides flexible FHIR resources to export data on a DiGA treatment for one patient at a time. The specification is flexible enough to allow for DiGA manufacturers to suit the treatment data to their needs, while at the same time strictly defining the structure of such a data export by using the Bundle and Composition FHIR resources to make machine-readable interoperability possible.
+
+Additional urls:
+- https://github.com/alex-therapeutics/fhir-diga-nicotine-addiction - Repository where you can find the latest releases of the standard, FHIR artefacts, and java library, as well as raise issues and propose changes to the standard.
+
+- https://simplifier.net/treat-nicotine-usage-diga - The FHIR package project page on Simplifier which holds the FHIR registry. You can also find an implementation guide shorter than the standard document here.
