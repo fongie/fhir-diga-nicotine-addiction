@@ -7,9 +7,9 @@ canonical: http://www.alextherapeutics.com/fhir
 name: treat-nicotine-usage-diga
 title: FHIR Profile for Digital Health Applications that treat self-reported nicotine usage  (F17.2)
 description: An implementation guide to the FHIR profile for DiGAs that treat ICD-10 F17.2.
-status: draft
+status: active
 license: CC-BY-4.0
-version: 0.1.0
+version: 1.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
